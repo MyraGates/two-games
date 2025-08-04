@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Two Games</title>
+
+</head>
+
+<body>
+    <h1>Myra Gates</h1>
+    <h1>Shall We Play a Game?</h1>
+
+    <div class="container">
+
+        <div class="tabs">
+            <ul>
+                <li class="trigger" data-target="#coin">Coin Game</li>
+                <li class="trigger" data-target="#Guessing">Guessing Game</li>
+            </ul>
+
+            <div class="content" id="coin">
+                <div class="center">
+                    <h1>Coin Toss</h1>
+                    <div id="gameArea" style="display:none;">
+                        <img id="coinImage" src="images/both.jpg" alt="Coin both sides">
+                        <div id="buttons">
+                            <button data-choice="heads">Heads</button>
+                            <button data-choice="tails">Tails</button>
+                        </div>
+                        <div id="result"></div>
+                        <div id="score">
+                            <p>Wins: <span id="wins">0</span></p>
+                            <p>Losses: <span id="losses">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" id="Guessing">
+                <h1>Number guessing game</h1>
+
+                <p>I have selected a random number between 1 and 100.</p><br>
+                <p>See if you can guess it 10 turns of fewer.</p><br>
+                <p>I'll tell you if your guess was too high or too low.</p>
+
+                <form class="guessForm">
+                    <label for="guessField">Enter your guess:</label>
+                    <input type="text" id="guessField" class="guessField">
+                    <button type="submit">Guess</button>
+                </form>
+
+                <div class="choices">
+                    <p class="prevGuesses"></p>
+                    <p><span class="lastResults"></span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="games/tabs.js"></script>
+    <script src="games/capps.js"></script>
+    <script src="games/gapps.js"></script>
+</body>
+
+</html>

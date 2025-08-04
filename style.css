@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #1e2a38;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #f4f4f4; 
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #f0f6fc; 
+    margin-bottom: 20px;
+}
+
+.container {
+    background-color: #2a3b4c; 
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tabs */
+.tabs > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tabs .trigger {
+    background: #4a5d74;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #f4f4f4;
+    transition: background 0.3s, color 0.3s;
+    border: 2px solid transparent;
+}
+
+.tabs .trigger:hover {
+    background: #5c708a;
+}
+
+.tabs .trigger.active {
+    background: #6ca0dc;
+    color: #fff;
+    border-color: #6ca0dc;
+}
+
+/* Tab content */
+.tabs .content {
+    display: none;
+}
+
+.tabs .content.active {
+    display: block;
+}
+
+/* Coin Game */
+#coinImage {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: auto;
+}
+
+#buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#buttons button {
+    background-color: #6ca0dc;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#buttons button:hover {
+    background-color: #5189c1;
+}
+
+#result {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+    color: #f0f6fc;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* Guessing Game */
+.guessForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.guessForm input {
+    padding: 10px;
+    font-size: 18px;
+    width: 60%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    background-color: #fefefe;
+    color: #333;
+}
+
+.guessForm button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.guessForm button:hover {
+    background-color: #1e874b;
+}
+
+/* Feedback styling */
+.prevGuesses {
+    text-align: center;
+    font-size: 18px;
+    color: #dddddd;
+    margin-top: 10px;
+}
+
+.lastResults {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Result classes */
+.tooBig {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+}
+
+.tooSmall {
+    background-color: #b3e5fc;
+    color: #01579b;
+}
+
+.tooMany {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.justRight {
+    background-color: #81c784;
+    color: #1b5e20;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .guessForm input {
+        width: 90%;
+    }
+
+    #buttons button {
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    #score {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
